@@ -21,14 +21,16 @@ function App() {
 					{championData.map((champion, id) => {
 						const { name, championId, cost, traits } = champion;
 						return (
-							<li key={id}>
-								<div>
-									<p>{name}</p>
-									<img src={Images[championId]} alt="" />
-									<p>{cost}</p>
-									<p>{traits}</p>
-								</div>
-							</li>
+							<div className="Card">
+								<li key={id}>
+									<div>
+										<p>{name}</p>
+										<img src={Images[championId]} alt="" />
+										<p>{cost}</p>
+										<p>{traits}</p>
+									</div>
+								</li>
+							</div>
 						);
 					})}
 				</ul>
