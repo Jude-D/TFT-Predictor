@@ -1,5 +1,5 @@
 import './App.css';
-import { Button } from 'reactstrap';
+import { Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
 import React from 'react';
 import championData from './set 5/champions.json';
 import Images from './Images';
@@ -16,21 +16,23 @@ function App() {
 				<div className="Board col-9"></div>
 			</div>
 			<div className="Suggestion"></div>
-			<div className="Units col-9">
+			<div className="Units d-flex justify-content-center">
 				<ul className="ListOfChamps">
 					{championData.map((champion, id) => {
 						const { name, championId, cost, traits } = champion;
 						return (
-							<div className="Card">
+							<Card>
 								<li key={id}>
 									<div>
-										<p>{name}</p>
+										<CardTitle>{name}</CardTitle>
 										<img src={Images[championId]} alt="" />
 										<p>{cost}</p>
-										<p>{traits}</p>
+										<p>{traits[0]}</p>
+										<p>{traits[1]}</p>
+										<p>{traits[2]}</p>
 									</div>
 								</li>
-							</div>
+							</Card>
 						);
 					})}
 				</ul>
