@@ -21,7 +21,7 @@ function App() {
 					{championData.map((champion, id) => {
 						const { name, championId, cost, traits } = champion;
 						return (
-							<Card className="Champion Cards">
+							<Card className="ChampionCards">
 								<li key={id}>
 									<div>
 										<CardTitle>{name}</CardTitle>
